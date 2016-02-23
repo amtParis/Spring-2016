@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Arkanoid</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- SOUNDCLOUD API -->
+    <script type="text/javascript" src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
+    <!-- COOPER HEWIT TOKEN -->
+    <script>
+      var CooperToken   = '936b87cbf3319477c412a4a2e28ca297';
+      var SoundCloudID  = '45cd90be26352fd5bc97a290be037884';
+      //twitter vars.
+      var error;
+      var success;
+      var twitter;
+    </script>
+    <!-- GRAPHICS LIBS -->
+    <script type="text/javascript" src="js/libs/bundle.js"></script>
+    <script type="text/javascript" src="js/libs/three.min.js"></script>
+    <script type="text/javascript" src="js/libs/OrbitControls.js"></script>
+    <script type="text/javascript" src="js/libs/Tween.js"></script>
+    <script type="text/javascript" src="js/JSONLoader.js"></script>
+    <script type="text/javascript" src="js/Particle.js"></script>
+    <script type="text/javascript" src="js/Piece.js"></script>
+    <script type="text/javascript" src="js/App.js"></script>
+  </head>
+  <body>
+    <div id="oembed"></div>
+    <script type="text/javascript">
+      var app = new App();
+      app.setTrack('https://soundcloud.com/apolline-dash/apolline-dash-rose');
+    </script>
+  </body>
+  </html>
