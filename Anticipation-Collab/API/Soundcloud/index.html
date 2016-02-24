@@ -7,7 +7,6 @@
   </head>
   <body>
     <button id="connect">connect</button>
-    <button id="record">record 1s</button>
     <div id="oembed"></div>
 
     <script type="text/javascript">
@@ -16,7 +15,12 @@
         redirect_uri: 'http://www.sold-out.ch/soundcloud/callback.html'
       });
 
-      SC.get('users/forss').then(function(user){console.log('Forss', user);});
+      SC.get('users/forss').then(function(user){
+        console.log('Forss', user);
+        var img_url = user.avatar_url;
+        console.log("avatar",img_url);
+        //document.body.innerHTML += '<img src="'+img_url+'"></img>';
+      });
       SC.get('/users/forss/playlists').then(function(user){console.log('Forss\'s playlists', user);});
 
       SC.get('tracks/soulhack').then(function(user){console.log('It\'s a deep Soulhack', user);}).catch();
@@ -37,29 +41,7 @@
         console.log('oembed err', err);
       });
 
-      var record = function(){
-        window.recorder = new SC.Recorder();
-        recorder.start().then(function(){
-          setTimeout(function() {
-            recorder.stop();
-            recorder.getWAV().then(function(blob){
-              SC.upload({
-                asset_data: blob,
-                title: 'track' + Date.now(),
-                sharing: 'private',
-                progress: (event) => {
-                  console.log('progress', event);
-                }
-              }).then(function(track){
-                console.log('uploaded', track);
-              }).catch(function(){
-                console.log('err', arguments);
-              });
-            })
-          }, 1000);
-        }).catch(function(){ console.log('not recording', arguments); });
-      };
-      document.getElementById('record').addEventListener('click', record);
+
 
       SC.stream('tracks/soulhack').then(function(player){
         console.log('loaded the song, access with window.player');

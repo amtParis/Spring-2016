@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cooper Hewitt</title>
+    <script type="text/javascript" src="JSONLoader.js"></script>
+  </head>
+  <body>
+    <h1>Various example</h1>
+
+    <script type="text/javascript">
+    var CooperToken   = '936b87cbf3319477c412a4a2e28ca297';
+    var url = 'https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.exhibitions.getList&access_token=' + CooperToken + '&page=1&per_page=500';
+    new JSONLoader(url,list);
+
+    function list(file){
+      console.log("list");
+        var expo = JSON.parse(file);
+        console.log(expo);
+
+    }
+
+    </script>
+  </body>
+  </html>

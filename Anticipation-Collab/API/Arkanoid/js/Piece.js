@@ -35,13 +35,13 @@ Piece.prototype = {
       }
     }
     //this.images = obj.images;
-    console.log("image number !!:",this.images.length);
+    //console.log("image number !!:",this.images.length);
     this.loadImages();
 
     //console.log(obj);
   },
   loadImages:function(){
-    console.log("loadImages");
+    //console.log("loadImages");
     this.limitCounter++;
     var img = new Image();
     img.onload = (function(){
