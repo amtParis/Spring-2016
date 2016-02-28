@@ -21,7 +21,7 @@ function onTouchStart(e){
 
 function onTouchMove(e){
     //add lines in group if finger is next to a star (20 px)
-    for(var i in stars){
+    for(var i =0;i<stars.length;i++){
         if(getDistance(e.changedTouches[0].pageX,e.changedTouches[0].pageY,stars[i].x,stars[i].y) <= 20 && !stars[i].isTouched){
             allGroups[touchCounter].push(stars[i]);
             stars[i].identifier = touchCounter;
