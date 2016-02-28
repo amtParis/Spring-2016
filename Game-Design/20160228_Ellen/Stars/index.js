@@ -62,10 +62,8 @@ function setup(){
         var star = new Circle(ctx);
         star.position(Math.random()*width,Math.random()*height);
         star.r = 1;
-        star.ID = i;
-        stars[star.ID] = star;
+        stars.push(star);
     }
-    
     //interaction
     document.addEventListener("touchstart", onTouchStart);
     document.addEventListener("touchmove", onTouchMove);
@@ -80,7 +78,7 @@ function draw(){
     ctx.fillStyle = "rgba(0,0,0,0.2)";
     ctx.fillRect(0,0,width,height);
     // display all stars ----------------------------
-    for(var i in stars){
+    for(var i = 0;i<stars.length;i++){
         stars[i].move();
         stars[i].display();
         //check if stars are out of screen

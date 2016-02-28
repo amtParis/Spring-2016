@@ -8,7 +8,6 @@ var Circle = function (ctx){
     this.a = 0;// angle for small orbit rotation
     this.orbit = Math.random()*15; // random orbit radius
     this.orbitSpeed = Math.random(); // random orbit speed
-    this.ID;
     this.isTouched = false;
     this.shapeMotion = false;
     this.identifier;
