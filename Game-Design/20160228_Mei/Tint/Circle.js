@@ -18,11 +18,11 @@ var Circle = function(ctx,r){
 Circle.prototype = {
 
     display:function(){
-        this.ctx.fillStyle = this.color;
-        this.ctx.beginPath();
-        this.ctx.arc(this.x,this.y,this.r,0,Math.PI*2,true);
-        this.ctx.closePath();
-        this.ctx.fill();
+            this.ctx.fillStyle = this.color;
+            this.ctx.beginPath();
+            this.ctx.arc(this.x,this.y,this.r,0,Math.PI*2,true);
+            this.ctx.closePath();
+            this.ctx.fill();
     },
     move:function(){
         this.y+=this.speed;
@@ -31,7 +31,64 @@ Circle.prototype = {
         //Check the position of this element with the target
         if(this.getDistance(this.x,this.y,target.x,target.y)<= (target.r + this.r) &&  this.canChangeColor){
             this.canChangeColor = false;
-            target.transformColor(this.rybColor);
+           // target.transformColor(this.rybColor);
+            // console.log(target.color,this.color);
+            var originalTargetColor = target.color;
+            //red
+            if(this.color=="red"&&target.color=="red"){target.color="red"}
+            if(this.color=="white"&&target.color=="red"){target.color="white"}
+            if(this.color=="gold"&&target.color=="red"){target.color="orange"}
+            if(this.color=="steelblue"&&target.color=="red"){target.color="mediumpurple"}
+            if(this.color=="black"&&target.color=="red"){target.color="black"}
+            //blue
+            if(this.color=="black"&&target.color=="steelblue"){target.color="black"}
+            if(this.color=="steelblue"&&target.color=="steelblue"){target.color="steelblue"}
+            if(this.color=="gold"&&target.color=="steelblue"){target.color="green"}
+            if(this.color=="steelblue"&&target.color=="steelblue"){target.color="steelblue"}
+            if(this.color=="red"&&target.color=="steelblue"){target.color="mediumpurple"}
+            //yellow
+            if(this.color=="black"&&target.color=="gold"){target.color="black"}
+            if(this.color=="white"&&target.color=="gold"){target.color="white"}
+            if(this.color=="gold"&&target.color=="gold"){target.color="gold"}
+            if(this.color=="steelblue"&&target.color=="gold"){target.color="green"}
+            if(this.color=="red"&&target.color=="gold"){target.color="orange"}
+            //white
+            if(this.color=="black"&&target.color=="white"){target.color="black"}
+            if(this.color=="white"&&target.color=="white"){target.color="white"}
+            if(this.color=="gold"&&target.color=="white"){target.color="gold";}
+            if(this.color=="steelblue"&&target.color=="white"){target.color="steelblue";}
+            if(this.color=="red"&&target.color=="white"){target.color="red";}
+            //black
+            if(this.color=="red"&&target.color=="black"){target.color="black"}
+            if(this.color=="steelblue"&&target.color=="black"){target.color="black"}
+            if(this.color=="black"&&target.color=="black"){target.color="black"}
+            if(this.color=="white"&&target.color=="black"){target.color="black"}
+            if(this.color=="steelblue"&&target.color=="black"){target.color="black"}
+            //------
+            
+            
+            if(originalTargetColor == target.color){
+                //orange
+                if(this.color=="gold"&&target.color=="orange"){target.color="black"}
+                if(this.color=="red"&&target.color=="orange"){target.color="black"}
+                if(this.color=="steelblue"&&target.color=="orange"){target.color="black"}
+                if(this.color=="black"&&target.color=="orange"){target.color="black"}
+                if(this.color=="white"&&target.color=="orange"){target.color="white"}
+                //green
+                if(this.color=="gold"&&target.color=="green"){target.color="black"}
+                if(this.color=="red"&&target.color=="green"){target.color="black"}
+                if(this.color=="steelblue"&&target.color=="green"){target.color="black"}
+                if(this.color=="black"&&target.color=="green"){target.color="black"}
+                if(this.color=="white"&&target.color=="green"){target.color="white"}
+                //mediumpurple
+                if(this.color=="gold"&&target.color=="mediumpurple"){target.color="black"}
+                if(this.color=="red"&&target.color=="mediumpurple"){target.color="black"}
+                if(this.color=="steelblue"&&target.color=="mediumpurple"){target.color="black"}
+                if(this.color=="black"&&target.color=="mediumpurple"){target.color="black"}
+                if(this.color=="white"&&target.color=="mediumpurple"){target.color="white"}
+            }
+            
+           // console.log(target.color);
         }
     },
     getDistance:function(x1,y1,x2,y2){
