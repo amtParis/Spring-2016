@@ -12,8 +12,8 @@ MazeElement.prototype = {
 
   display:function(){
 
-    // this.ctx.fillStyle = this.color;
-    // this.ctx.fillRect(this.x,this.y,this.side,this.side);
+    //  this.ctx.fillStyle = this.color;
+    //  this.ctx.fillRect(this.x,this.y,this.side,this.side);
     this.ctx.strokeStyle = this.color;
     this.ctx.lineWidth = 5;
     this.ctx.beginPath();

@@ -39,6 +39,7 @@ function initGame(){
   myFirstCircle.x = 200;
   myFirstCircle.y = window.innerHeight-50;
   myFirstCircle.r = 20;
+//  myFirstCircle.color = "#ff0000";
 
   //let's create some obstacles to complicate the game
   for(var i=0;i<20;i++){
@@ -93,7 +94,7 @@ function draw(){
     ctx.fillText("Score : " + score,10,30);
 
     //Let's draw the obstacles
-    for(var i=0;i<20;i++){
+    for(var i=0;i<allMyCircles.length;i++){
         allMyCircles[i].display();
     }
 
@@ -105,6 +106,8 @@ function draw(){
     myFirstCircle.check(allMyCircles);
     myFirstCircle.update(mazeElements,speed);
     myFirstCircle.display();
+
+
     requestAnimationFrame(draw);
 }
 setup();
