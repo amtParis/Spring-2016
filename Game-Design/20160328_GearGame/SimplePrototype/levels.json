@@ -1,0 +1,121 @@
+{
+    "level-1": {
+        "message": "Entering Level 1",
+        "gears": [
+                  {
+                  "position": { "x": 300, "y": 300 },
+                  "arms": [
+                           { "angle": 45, "length": 120, "speed": 2 },
+                           { "angle": 90, "length": 120, "speed": 2 },
+                           { "angle": 135, "length": 150, "speed":2 },
+                           { "angle": 180, "length": 140, "speed": 2.2 },
+                           { "angle": 225, "length": 140, "speed":2.2}
+                           ]
+                  }
+                  ]
+    },
+    "level-2": {
+        "message": "Level 2",
+        "gears": [
+                  {
+                  "position": { "x": 0, "y": 100 },
+                  "arms": [
+                           { "angle": 45, "length": 180, "speed": 1.6 },
+                           { "angle": 90, "length": 180, "speed": 2 },
+                           { "angle": 135, "length": 180, "speed": 2 }
+                           ]
+                  },
+                  {
+                  "position": { "x": 365, "y": 380 },
+                  "arms": [
+                           { "angle": 45, "length": 180, "speed": 2.6 },
+                           { "angle": 90, "length": 180, "speed": 2.6 },
+                           { "angle": 135, "length": 180, "speed": 2.6 },
+                           { "angle": 180, "length": 180, "speed": 2.6 },
+                           { "angle": 225, "length": 180, "speed": 2.6 }
+                           ]
+                  }
+                  ]
+    },
+    "level-3": {
+        "message": "Level 3",
+        "gears": [
+                  {
+                  "position": { "x": 0, "y": 400 },
+                  "arms": [
+                           { "angle": 0, "length": 180, "speed": 2.3 },
+                           { "angle": 120, "length": 180, "speed": 2.3 },
+                           { "angle": 240, "length": 180, "speed": 2.3 }
+                           ]
+                  },
+                  {
+                  "position": { "x": 365, "y": 0 },
+                  "arms": [
+                           { "angle": 0, "length": 180, "speed": 2.3 },
+                           { "angle": 120, "length": 180, "speed": 2.3 },
+                           { "angle": 240, "length": 180, "speed": 2.3 }
+                           ]
+                  }
+                  ]
+    },
+    
+    "level-4": {
+        "message": "Level 4",
+        "gears": [
+                  {
+                  "position": { "x": 70, "y": 100 },
+                  "arms": [
+                           { "angle": 0, "length": 180, "speed": 2.3 },
+                           { "angle": 120, "length": 180, "speed": 2.3 },
+                           { "angle": 240, "length": 180, "speed": 2.3 }
+                           ]
+                  },
+                  {
+                  "position": { "x": 150, "y": 200 },
+                  "arms": [
+                           { "angle": 0, "length": 180, "speed": 2.3 },
+                           { "angle": 120, "length": 180, "speed": 2.3 },
+                           { "angle": 240, "length": 180, "speed": 2.3 }
+                           ]
+                  },
+                  {
+                  "position": { "x": 125, "y": 20 },
+                  "arms": [
+                           { "angle": 0, "length": 180, "speed": 2.3 },
+                           { "angle": 120, "length": 180, "speed": 2.3 },
+                           { "angle": 240, "length": 180, "speed": 2.3 }
+                           ]
+                  }
+                  ]
+    },
+    "level-5": {
+        "message": "Level 5",
+        "gears": [
+                  {
+                  "position": { "x": 30, "y": 50 },
+                  "arms": [
+                           { "angle": 0, "length": 180, "speed": 2.3 },
+                           { "angle": 120, "length": 180, "speed": 2.3 },
+                           { "angle": 240, "length": 180, "speed": 2.3 }
+                           ]
+                  },
+                  {
+                  "position": { "x": 70, "y": 100 },
+                  "arms": [
+                           { "angle": 0, "length": 180, "speed": 2.3 },
+                           { "angle": 120, "length": 180, "speed": 2.3 },
+                           { "angle": 240, "length": 180, "speed": 2.3 }
+                           ]
+                  
+                  },
+                  {
+                  "position": { "x": 150, "y": 200 },
+                  "arms": [
+                           { "angle": 0, "length": 180, "speed": 2.3 },
+                           { "angle": 120, "length": 180, "speed": 2.3 },
+                           { "angle": 240, "length": 180, "speed": 2.3 }
+                           ]
+                  }
+                  ]
+    }
+}
