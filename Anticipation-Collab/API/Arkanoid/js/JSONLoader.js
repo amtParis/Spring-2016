@@ -13,7 +13,7 @@ var JSONLoader = function(url,callback){
 	if (document.location.hostname == "localhost"){
 		this.status = "200";
 		console.log("localhost");
-	}else if(document.location.hostname == "169.254.216.23"){ // tempo IP TB changed
+	}else if(document.location.hostname == "192.168.1.15"){ // tempo IP TB changed
 		this.status = "200";
 		console.log("localhost");
 	}else{
